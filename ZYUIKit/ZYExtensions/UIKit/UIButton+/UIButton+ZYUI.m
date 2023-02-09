@@ -256,7 +256,7 @@ static const void *kZYUIButtonWrapperkey = &kZYUIButtonWrapperkey;
 
 @implementation UIButton (ZYUI)
 
-- (void)setzy_contentLayoutStyle:(ZYUIButtonContentLayoutStyle)zy_contentLayoutStyle
+- (void)setZy_contentLayoutStyle:(ZYUIButtonContentLayoutStyle)zy_contentLayoutStyle
 {
     [self zy_buttonWrapper].contentLayoutStyle = zy_contentLayoutStyle;
     [self zy_setupButtonLayout];
@@ -268,7 +268,7 @@ static const void *kZYUIButtonWrapperkey = &kZYUIButtonWrapperkey;
     return [self zy_buttonWrapper].contentLayoutStyle;
 }
 
-- (void)setzy_padding:(CGFloat)zy_padding
+- (void)setZy_padding:(CGFloat)zy_padding
 {
     [self zy_buttonWrapper].padding = zy_padding;
     [self zy_setupButtonLayout];
@@ -280,7 +280,7 @@ static const void *kZYUIButtonWrapperkey = &kZYUIButtonWrapperkey;
     return [self zy_buttonWrapper].padding;
 }
 
-- (void)setzy_paddingInset:(CGFloat)zy_paddingInset
+- (void)setZy_paddingInset:(CGFloat)zy_paddingInset
 {
     [self zy_buttonWrapper].paddingInset = zy_paddingInset;
     [self zy_setupButtonLayout];
@@ -297,7 +297,7 @@ static const void *kZYUIButtonWrapperkey = &kZYUIButtonWrapperkey;
     return [self zy_buttonWrapper].touchEdgeInsets;
 }
 
-- (void)setzy_touchEdgeInsets:(UIEdgeInsets)zy_touchEdgeInsets
+- (void)setZy_touchEdgeInsets:(UIEdgeInsets)zy_touchEdgeInsets
 {
     [self zy_buttonWrapper].touchEdgeInsets = zy_touchEdgeInsets;
 }
@@ -321,7 +321,7 @@ static const void *kZYUIButtonWrapperkey = &kZYUIButtonWrapperkey;
     [self setNeedsDisplay];
 }
 
-- (void)setzy_btnClickblock:(void (^)(UIButton * _Nonnull))zy_btnClickblock {
+- (void)setZy_btnClickblock:(void (^)(UIButton * _Nonnull))zy_btnClickblock {
     objc_setAssociatedObject(self, @selector(zy_btnClickblock),zy_btnClickblock,OBJC_ASSOCIATION_COPY_NONATOMIC);
     [self addTarget:self action:@selector(zy_click:) forControlEvents:UIControlEventTouchUpInside];
 }

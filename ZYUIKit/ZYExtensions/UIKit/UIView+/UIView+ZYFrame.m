@@ -14,7 +14,7 @@
     return CGRectGetMinY(self.frame);
 }
 
-- (void)setzy_top:(CGFloat)top
+- (void)setZy_top:(CGFloat)top
 {
     CGRect frame = self.frame;
     frame.origin.y = top;
@@ -26,7 +26,7 @@
     return CGRectGetMinX(self.frame);
 }
 
-- (void)setzy_left:(CGFloat)left
+- (void)setZy_left:(CGFloat)left
 {
     CGRect frame = self.frame;
     frame.origin.x = left;
@@ -38,7 +38,7 @@
     return CGRectGetMaxY(self.frame);
 }
 
-- (void)setzy_bottom:(CGFloat)bottom
+- (void)setZy_bottom:(CGFloat)bottom
 {
     CGRect frame = self.frame;
     frame.origin.y = bottom - frame.size.height;
@@ -50,7 +50,7 @@
     return CGRectGetMaxX(self.frame);
 }
 
-- (void)setzy_right:(CGFloat)right
+- (void)setZy_right:(CGFloat)right
 {
     CGRect frame = self.frame;
     frame.origin.x = right - frame.size.width;
@@ -62,7 +62,7 @@
     return CGRectGetWidth(self.frame);
 }
 
-- (void)setzy_width:(CGFloat)width
+- (void)setZy_width:(CGFloat)width
 {
     CGRect frame = self.frame;
     frame.size.width = width;
@@ -74,7 +74,7 @@
     return CGRectGetHeight(self.frame);
 }
 
-- (void)setzy_height:(CGFloat)height
+- (void)setZy_height:(CGFloat)height
 {
     CGRect frame = self.frame;
     frame.size.height = height;
@@ -86,7 +86,7 @@
     return CGRectGetMidX(self.frame);
 }
 
-- (void)setzy_centerX:(CGFloat)zy_centerX
+- (void)setZy_centerX:(CGFloat)zy_centerX
 {
     self.center = CGPointMake(zy_centerX, self.center.y);
 }
@@ -96,7 +96,7 @@
     return CGRectGetMidY(self.frame);
 }
 
-- (void)setzy_centerY:(CGFloat)zy_centerY
+- (void)setZy_centerY:(CGFloat)zy_centerY
 {
     self.center = CGPointMake(self.center.x, zy_centerY);
 }
@@ -106,7 +106,7 @@
     return self.frame.size;
 }
 
-- (void)setzy_size:(CGSize)zy_size
+- (void)setZy_size:(CGSize)zy_size
 {
     CGRect frame = self.frame;
     frame.size = zy_size;
@@ -118,7 +118,7 @@
     return self.zy_top;
 }
 
-- (void)setzy_extendToTop:(CGFloat)zy_extendToTop
+- (void)setZy_extendToTop:(CGFloat)zy_extendToTop
 {
     self.zy_height = self.zy_bottom - zy_extendToTop;
     self.zy_top = zy_extendToTop;
@@ -129,7 +129,7 @@
     return self.zy_left;
 }
 
-- (void)setzy_extendToLeft:(CGFloat)zy_extendToLeft
+- (void)setZy_extendToLeft:(CGFloat)zy_extendToLeft
 {
     self.zy_width = self.zy_right - zy_extendToLeft;
     self.zy_left = zy_extendToLeft;
@@ -140,7 +140,7 @@
     return self.zy_bottom;
 }
 
-- (void)setzy_extendToBottom:(CGFloat)zy_extendToBottom
+- (void)setZy_extendToBottom:(CGFloat)zy_extendToBottom
 {
     self.zy_height = zy_extendToBottom - self.zy_top;
     self.zy_bottom = zy_extendToBottom;
@@ -151,7 +151,7 @@
     return self.zy_right;
 }
 
-- (void)setzy_extendToRight:(CGFloat)zy_extendToRight
+- (void)setZy_extendToRight:(CGFloat)zy_extendToRight
 {
     self.zy_width = zy_extendToRight - self.zy_left;
     self.zy_right = zy_extendToRight;

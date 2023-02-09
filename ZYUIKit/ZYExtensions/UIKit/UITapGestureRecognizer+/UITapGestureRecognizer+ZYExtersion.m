@@ -10,7 +10,7 @@
 
 @implementation UITapGestureRecognizer (ZYExtersion)
 
-- (void)setzy_block:(void (^)(UITapGestureRecognizer * _Nonnull))zy_block
+- (void)setZy_block:(void (^)(UITapGestureRecognizer * _Nonnull))zy_block
 {
     objc_setAssociatedObject(self, @selector(zy_block),zy_block,OBJC_ASSOCIATION_COPY_NONATOMIC);
     [self addTarget:self action:@selector(zy_click:)];

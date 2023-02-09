@@ -98,7 +98,7 @@ static const void *kZYUITextViewWrapperkey = &kZYUITextViewWrapperkey;
 
 @implementation UITextView (ZYUI)
 
-- (void)setzy_limitMaxLength:(NSInteger)zy_limitMaxLength
+- (void)setZy_limitMaxLength:(NSInteger)zy_limitMaxLength
 {
     [self zy_limitMaxLength:zy_limitMaxLength textViewDidChange:nil];
 }

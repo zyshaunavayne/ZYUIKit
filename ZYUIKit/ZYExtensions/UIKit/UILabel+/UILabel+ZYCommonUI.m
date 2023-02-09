@@ -193,7 +193,7 @@ static const void *kZYUILabelCommonUIWrapperkey = &kZYUILabelCommonUIWrapperkey;
 
 @implementation UILabel (ZYCommonUI)
 
-- (void)setzy_accessoryType:(ZYUILabelAccessoryType)zy_accessoryType
+- (void)setZy_accessoryType:(ZYUILabelAccessoryType)zy_accessoryType
 {
     [self zy_commonUIWrapper].accessoryType = zy_accessoryType;
 }
@@ -203,7 +203,7 @@ static const void *kZYUILabelCommonUIWrapperkey = &kZYUILabelCommonUIWrapperkey;
     return [self zy_commonUIWrapper].accessoryType;
 }
 
-- (void)setzy_accessoryPosition:(ZYUILabelAccessoryPosition)zy_accessoryPosition
+- (void)setZy_accessoryPosition:(ZYUILabelAccessoryPosition)zy_accessoryPosition
 {
     [self zy_commonUIWrapper].accessoryPosition = zy_accessoryPosition;
 }
@@ -213,7 +213,7 @@ static const void *kZYUILabelCommonUIWrapperkey = &kZYUILabelCommonUIWrapperkey;
     return [self zy_commonUIWrapper].accessoryPosition;
 }
 
-- (void)setzy_accessoryPadding:(CGFloat)zy_accessoryPadding
+- (void)setZy_accessoryPadding:(CGFloat)zy_accessoryPadding
 {
     [self zy_commonUIWrapper].accessoryPadding = zy_accessoryPadding;
 }
@@ -223,7 +223,7 @@ static const void *kZYUILabelCommonUIWrapperkey = &kZYUILabelCommonUIWrapperkey;
     return [self zy_commonUIWrapper].accessoryPadding;
 }
 
-- (void)setzy_baselineOffset:(CGFloat)zy_baselineOffset
+- (void)setZy_baselineOffset:(CGFloat)zy_baselineOffset
 {
     [self zy_commonUIWrapper].baselineOffset = zy_baselineOffset;
 }
@@ -233,7 +233,7 @@ static const void *kZYUILabelCommonUIWrapperkey = &kZYUILabelCommonUIWrapperkey;
     return [self zy_commonUIWrapper].baselineOffset;
 }
 
-- (void)setzy_textInset:(UIEdgeInsets)zy_textInset
+- (void)setZy_textInset:(UIEdgeInsets)zy_textInset
 {
     [self zy_commonUIWrapper].textInset = zy_textInset;
 }

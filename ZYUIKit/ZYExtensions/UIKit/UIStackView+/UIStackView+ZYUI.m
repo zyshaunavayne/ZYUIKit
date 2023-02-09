@@ -155,13 +155,13 @@ static const void *kZYUIStackViewWrapperkey = &kZYUIStackViewWrapperkey;
 
 @implementation UIStackView (ZYUI)
 
-- (void)setzy_separatorColor:(UIColor *)zy_separatorColor
+- (void)setZy_separatorColor:(UIColor *)zy_separatorColor
 {
     [self zy_stackViewWrapper].separatorColor = zy_separatorColor;
     [[self zy_stackViewWrapper] makeSeparators];
 }
 
-- (void)setzy_separatorInset:(UIEdgeInsets)zy_separatorInset
+- (void)setZy_separatorInset:(UIEdgeInsets)zy_separatorInset
 {
     [self zy_stackViewWrapper].separatorInset = zy_separatorInset;
     [[self zy_stackViewWrapper] makeSeparators];

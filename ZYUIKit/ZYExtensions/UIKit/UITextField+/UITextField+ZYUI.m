@@ -208,7 +208,7 @@ static const void *kZYUITextFieldWrapperkey = &kZYUITextFieldWrapperkey;
     return textField;
 }
 
-- (void)setzy_limitMaxLength:(NSInteger)zy_limitMaxLength
+- (void)setZy_limitMaxLength:(NSInteger)zy_limitMaxLength
 {
     [self zy_limitMaxLength:zy_limitMaxLength textViewDidChange:nil];
 }
@@ -218,7 +218,7 @@ static const void *kZYUITextFieldWrapperkey = &kZYUITextFieldWrapperkey;
     return [self zy_textFieldWrapper].maxLength;
 }
 
-- (void)setzy_textFieldType:(ZYTextFieldType)zy_textFieldType
+- (void)setZy_textFieldType:(ZYTextFieldType)zy_textFieldType
 {
     [self zy_textFieldWrapper].textFieldType = zy_textFieldType;
 }
@@ -228,7 +228,7 @@ static const void *kZYUITextFieldWrapperkey = &kZYUITextFieldWrapperkey;
     return [self zy_textFieldWrapper].textFieldType;
 }
 
-- (void)setzy_inputType:(ZYTextFieldInputType)zy_inputType
+- (void)setZy_inputType:(ZYTextFieldInputType)zy_inputType
 {
     [self zy_textFieldWrapper].inputType = zy_inputType;
 }
