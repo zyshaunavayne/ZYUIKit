@@ -149,7 +149,7 @@
     NSString *stirng = ZYSafeString(self.placeholderText, @"请输入关键字");
     NSDictionary *attributes = @{
         NSForegroundColorAttributeName : self.placeholderColor ? self.placeholderColor : ZYColor_HEX(@"C0C4CC"),
-        NSFontAttributeName : self.placeholderFont ? self.placeholderFont : zy_RegularFont(15),
+        NSFontAttributeName : self.placeholderFont ? self.placeholderFont : ZY_RegularFont(15),
     };
     self.searchTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:stirng attributes:attributes];
 }
@@ -191,7 +191,7 @@
         _searchTextField = [[UITextField alloc] init];
         _searchTextField.tintColor = ZYColor_HEX(@"C0C4CC");
         _searchTextField.textColor = ZYColor_HEX(@"333333");
-        _searchTextField.font = zy_RegularFont(15);
+        _searchTextField.font = ZY_RegularFont(15);
         _searchTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
         _searchTextField.returnKeyType = UIReturnKeySearch;
         _searchTextField.delegate = self;///实现键盘点击搜索按钮
@@ -205,7 +205,7 @@
 - (UIButton *)searchButton {
     if (!_searchButton) {
         _searchButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        _searchButton.titleLabel.font = zy_RegularFont(18);
+        _searchButton.titleLabel.font = ZY_RegularFont(18);
         [_searchButton setTitle:@"搜索" forState:UIControlStateNormal];
         [_searchButton addTarget:self action:@selector(searchButtonAction:) forControlEvents:UIControlEventTouchUpInside];
     } return _searchButton;
