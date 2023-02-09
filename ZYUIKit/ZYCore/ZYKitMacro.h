@@ -14,13 +14,13 @@
 ///------------
 
 /// 获取屏幕的宽度
-#define zy_SCREEN_WIDTH  [UIScreen mainScreen].bounds.size.width
+#define ZY_SCREEN_WIDTH  [UIScreen mainScreen].bounds.size.width
 
 /// 获取屏幕的高度
-#define zy_SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+#define ZY_SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 
 /// 获取window
-#define zy_MAIN_WINDOW \
+#define ZY_MAIN_WINDOW \
 ({UIWindow *window = nil; \
 if (@available(iOS 15.0, *)) { \
     for (UIWindowScene* windowScene in [UIApplication sharedApplication].connectedScenes) { \
@@ -43,24 +43,24 @@ if (window == nil) { \
 (window);})
 
 ///是否为iPhone X 系列手机
-#define zy_IPHONE_X \
+#define ZY_IPHONE_X \
 ({BOOL isPhoneX = NO;\
 if (@available(iOS 11.0, *)) {\
-isPhoneX = zy_MAIN_WINDOW.safeAreaInsets.bottom > 0.0;\
+isPhoneX = ZY_MAIN_WINDOW.safeAreaInsets.bottom > 0.0;\
 }\
 (isPhoneX);})
 
 /// 适配屏幕底部安全间距离高度
-#define zy_SAFE_AREA_BOTTOM_HEIGHT \
+#define ZY_SAFE_AREA_BOTTOM_HEIGHT \
 ({CGFloat safeHeight = CGFLOAT_MIN; \
 if (@available(iOS 11.0, *)) { \
-safeHeight = zy_MAIN_WINDOW.safeAreaInsets.bottom; \
+safeHeight = ZY_MAIN_WINDOW.safeAreaInsets.bottom; \
 } \
 else { safeHeight = [UIApplication sharedApplication].statusBarFrame.size.height; } \
 (safeHeight);})
 
 /// 获取状态栏高度
-#define zy_STATUS_BAR_HEIGHT \
+#define ZY_STATUS_BAR_HEIGHT \
 ({CGFloat statusBarHeight = 0; \
 if (@available(iOS 13.0, *)) { \
 UIStatusBarManager *statusBarManager = [UIApplication sharedApplication].windows.firstObject.windowScene.statusBarManager; \
@@ -77,12 +77,12 @@ else { statusBarHeight = [UIApplication sharedApplication].statusBarFrame.size.h
 #if __has_include(<ReactiveObjC/ReactiveObjC.h>) || __has_include(<ReactiveCocoa/ReactiveCocoa.h>)
 
 /// 基于RAC的任意数据的双向数据绑定
-#define zy_RAC_A(Target1, Key1, Target2, Key2) \
+#define ZY_RAC_A(Target1, Key1, Target2, Key2) \
 Target1.Key1 = Target2.Key2; \
 RACChannelTo(Target1, Key1) = RACChannelTo(Target2, Key2); \
 
 /// 基于RAC输入控件的双向数据绑定
-#define zy_RAC_INPUT(UIInputControl, Key1, EventHandler, Key2) \
+#define ZY_RAC_INPUT(UIInputControl, Key1, EventHandler, Key2) \
 UIInputControl.Key1 = EventHandler.Key2; \
 RACChannelTo(UIInputControl, Key1) = RACChannelTo(EventHandler, Key2); \
 if ([UIInputControl isKindOfClass:UITextField.class]) { \
@@ -101,7 +101,7 @@ if ([UIInputControl isKindOfClass:UITextField.class]) { \
 #endif
 
 /// UIButton点击事件绑定
-#define zy_RAC_BUTTON(UIControl, Target, Action) \
+#define ZY_RAC_BUTTON(UIControl, Target, Action) \
 [UIControl addTarget:Target action:Action forControlEvents:UIControlEventTouchUpInside];
 
 #endif /* ZYKitMacro_h */
