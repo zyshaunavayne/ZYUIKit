@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A52B71E2999EEB10007B227 /* ZYMD5Crypt.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A52B71C2999EEB10007B227 /* ZYMD5Crypt.h */; };
+		2A52B71F2999EEB10007B227 /* ZYMD5Crypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A52B71D2999EEB10007B227 /* ZYMD5Crypt.m */; };
 		2A929D2A299390B5000EA69D /* ZYUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A929D29299390B5000EA69D /* ZYUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2A929D3229939422000EA69D /* ZYUIKit.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 2A929D3029939422000EA69D /* ZYUIKit.podspec */; };
 		2A929D3329939422000EA69D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2A929D3129939422000EA69D /* README.md */; };
@@ -87,6 +89,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A52B71C2999EEB10007B227 /* ZYMD5Crypt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYMD5Crypt.h; sourceTree = "<group>"; };
+		2A52B71D2999EEB10007B227 /* ZYMD5Crypt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYMD5Crypt.m; sourceTree = "<group>"; };
 		2A929D26299390B5000EA69D /* ZYUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZYUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A929D29299390B5000EA69D /* ZYUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYUIKit.h; sourceTree = "<group>"; };
 		2A929D3029939422000EA69D /* ZYUIKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ZYUIKit.podspec; sourceTree = "<group>"; };
@@ -181,6 +185,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A52B71B2999EE9E0007B227 /* MD5Crypt */ = {
+			isa = PBXGroup;
+			children = (
+				2A52B71C2999EEB10007B227 /* ZYMD5Crypt.h */,
+				2A52B71D2999EEB10007B227 /* ZYMD5Crypt.m */,
+			);
+			path = MD5Crypt;
+			sourceTree = "<group>";
+		};
 		2A929D1C299390B5000EA69D = {
 			isa = PBXGroup;
 			children = (
@@ -420,6 +433,7 @@
 		2A929DA629939477000EA69D /* ZYComponents */ = {
 			isa = PBXGroup;
 			children = (
+				2A52B71B2999EE9E0007B227 /* MD5Crypt */,
 				2A929DA729939477000EA69D /* UILabel */,
 				2A929DCC29939477000EA69D /* UIButton */,
 				2A929DCF29939477000EA69D /* WebViewJavascriptBridge */,
@@ -576,6 +590,7 @@
 				2A929E4829939C85000EA69D /* UITextField+ZYUI.h in Headers */,
 				2A929E5C29939DBE000EA69D /* UIView+ZYUI.h in Headers */,
 				2A929E40299399F1000EA69D /* NSString+ZYDecimalCompute.h in Headers */,
+				2A52B71E2999EEB10007B227 /* ZYMD5Crypt.h in Headers */,
 				2A929E5429939D6A000EA69D /* UITextView+ZYUI.h in Headers */,
 				2A929EA82993A3D1000EA69D /* ZYSearchView.h in Headers */,
 				2A929E9C2993A245000EA69D /* ZYRouterNP.h in Headers */,
@@ -718,6 +733,7 @@
 				2A929E5929939D9E000EA69D /* UIView+ZYFrame.m in Sources */,
 				2A929E7129939F4D000EA69D /* UILabel+ZYCommonUI.m in Sources */,
 				2A929E4529939A89000EA69D /* UIStackView+ZYUI.m in Sources */,
+				2A52B71F2999EEB10007B227 /* ZYMD5Crypt.m in Sources */,
 				2A929E41299399F1000EA69D /* NSString+ZYDecimalCompute.m in Sources */,
 				2A929E392993993D000EA69D /* NSString+ZYUI.m in Sources */,
 				2A929E7529939F99000EA69D /* UIImage+ZYQRCode.m in Sources */,

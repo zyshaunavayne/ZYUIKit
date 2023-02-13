@@ -26,6 +26,7 @@ FOUNDATION_EXPORT const unsigned char ZYUIKitVersionString[];
 #import "ZYRouterNP.h"
 #import "ZYTriangleTagView.h"
 #import "ZYSearchView.h"
+#import "ZYMD5Crypt.h"
 
 // ZYExtensions
 #import "NSAttributedString+ZYUI.h"
