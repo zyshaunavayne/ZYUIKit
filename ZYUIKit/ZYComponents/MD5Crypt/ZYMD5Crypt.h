@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// MD5 加密
 /// - Parameter input: 字符串
-+ (NSString *)ZYMd5EncryptionWithString:(NSString *)input;
++ (NSString *)ZY_Md5EncryptionWithString:(NSString *)input;
 
 @end
 

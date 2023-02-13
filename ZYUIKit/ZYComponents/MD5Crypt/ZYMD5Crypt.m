@@ -10,7 +10,7 @@
 
 @implementation ZYMD5Crypt
 
-+ (NSString *)ZYMd5EncryptionWithString:(NSString *)input
++ (NSString *)ZY_Md5EncryptionWithString:(NSString *)input
 {
     const char *cStr = [input UTF8String];
     unsigned char digest[CC_MD5_DIGEST_LENGTH];
