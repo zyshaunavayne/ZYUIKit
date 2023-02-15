@@ -31,4 +31,7 @@
 /// 获取当前栈上显示的ViewController
 + (UIViewController *)currentViewController;
 
+/// 获取window
++ (UIWindow *)zy_window;
+
 @end

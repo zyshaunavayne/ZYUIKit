@@ -65,7 +65,7 @@
 
 + (UIViewController *)currentViewController
 {
-    UIViewController *rootViewController = [self window].rootViewController;
+    UIViewController *rootViewController = [self zy_window].rootViewController;
     return [self currentViewControllerFrom:rootViewController];
 }
 
@@ -84,7 +84,7 @@
     }
 }
 
-+ (UIWindow *)window
++ (UIWindow *)zy_window
 {
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
     if (window) {
