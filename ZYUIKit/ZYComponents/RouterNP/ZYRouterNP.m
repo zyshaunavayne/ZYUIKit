@@ -12,7 +12,34 @@
 + (void)pushViewController:(UIViewController *)destination animated:(BOOL)animated
 {
     NSParameterAssert([destination isKindOfClass:[UIViewController class]]);
-    [[self currentNavigationViewController] pushViewController:destination animated:animated];
+    UINavigationController *nav = [self currentNavigationViewController];
+    [self newPushViewControllerWithNavigationController:nav viewController:destination animated:animated];
+}
+
++ (void)newPushViewControllerWithNavigationController:(UINavigationController *)navigationController viewController:(UIViewController *)viewController animated:(BOOL)animated
+{
+    BOOL isFirstFront = [self checkVisiterControllerIsFirstFrontControllerWithNavigationController:navigationController viewController:viewController];
+    if (isFirstFront) {
+        viewController.hidesBottomBarWhenPushed = YES;
+        [navigationController pushViewController:viewController animated:animated];
+        viewController.hidesBottomBarWhenPushed = NO;
+    } else {
+        viewController.hidesBottomBarWhenPushed = YES;
+        [navigationController pushViewController:viewController animated:animated];
+    }
+}
+
++ (BOOL)checkVisiterControllerIsFirstFrontControllerWithNavigationController:(UINavigationController *)navigationController viewController:(UIViewController *)viewController
+{
+    BOOL isFirstFront = NO;
+    if (viewController) {
+        NSArray *viewControllers = navigationController.viewControllers;
+        UIViewController *baseVC = viewControllers.firstObject;
+        if ([baseVC isKindOfClass:[navigationController class]]) {
+            isFirstFront = YES;
+        }
+    }
+    return isFirstFront;
 }
 
 + (void)popToViewControllerName:(NSString *)name animated:(BOOL)animated
