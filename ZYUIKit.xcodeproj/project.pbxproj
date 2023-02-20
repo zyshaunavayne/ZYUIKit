@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2A52B71E2999EEB10007B227 /* ZYMD5Crypt.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A52B71C2999EEB10007B227 /* ZYMD5Crypt.h */; };
 		2A52B71F2999EEB10007B227 /* ZYMD5Crypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A52B71D2999EEB10007B227 /* ZYMD5Crypt.m */; };
+		2A86089D29A364C0002524BD /* UIImage+ZYColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A86089B29A364C0002524BD /* UIImage+ZYColor.h */; };
+		2A86089E29A364C0002524BD /* UIImage+ZYColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A86089C29A364C0002524BD /* UIImage+ZYColor.m */; };
 		2A929D2A299390B5000EA69D /* ZYUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A929D29299390B5000EA69D /* ZYUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2A929D3229939422000EA69D /* ZYUIKit.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 2A929D3029939422000EA69D /* ZYUIKit.podspec */; };
 		2A929D3329939422000EA69D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2A929D3129939422000EA69D /* README.md */; };
@@ -91,6 +93,8 @@
 /* Begin PBXFileReference section */
 		2A52B71C2999EEB10007B227 /* ZYMD5Crypt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYMD5Crypt.h; sourceTree = "<group>"; };
 		2A52B71D2999EEB10007B227 /* ZYMD5Crypt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYMD5Crypt.m; sourceTree = "<group>"; };
+		2A86089B29A364C0002524BD /* UIImage+ZYColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+ZYColor.h"; sourceTree = "<group>"; };
+		2A86089C29A364C0002524BD /* UIImage+ZYColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ZYColor.m"; sourceTree = "<group>"; };
 		2A929D26299390B5000EA69D /* ZYUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZYUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A929D29299390B5000EA69D /* ZYUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYUIKit.h; sourceTree = "<group>"; };
 		2A929D3029939422000EA69D /* ZYUIKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ZYUIKit.podspec; sourceTree = "<group>"; };
@@ -384,6 +388,8 @@
 			children = (
 				2A929E7229939F99000EA69D /* UIImage+ZYQRCode.h */,
 				2A929E7329939F99000EA69D /* UIImage+ZYQRCode.m */,
+				2A86089B29A364C0002524BD /* UIImage+ZYColor.h */,
+				2A86089C29A364C0002524BD /* UIImage+ZYColor.m */,
 			);
 			path = "UIImage+";
 			sourceTree = "<group>";
@@ -597,6 +603,7 @@
 				2A929E6029939DFC000EA69D /* UITapGestureRecognizer+ZYExtersion.h in Headers */,
 				2A929E3C29939992000EA69D /* NSString+ZYRegularEvaluate.h in Headers */,
 				2A929E7429939F99000EA69D /* UIImage+ZYQRCode.h in Headers */,
+				2A86089D29A364C0002524BD /* UIImage+ZYColor.h in Headers */,
 				2A929E382993993D000EA69D /* NSString+ZYUI.h in Headers */,
 				2A929E942993A1B4000EA69D /* ZYGradientView.h in Headers */,
 				2A929E7029939F4D000EA69D /* UILabel+ZYCommonUI.h in Headers */,
@@ -723,6 +730,7 @@
 				2A929EA92993A3D1000EA69D /* ZYSearchView.m in Sources */,
 				2A929EAD2993A477000EA69D /* ZYTriangleTagView.m in Sources */,
 				2A929E2D29939670000EA69D /* ZYEasy.m in Sources */,
+				2A86089E29A364C0002524BD /* UIImage+ZYColor.m in Sources */,
 				2A929E5D29939DBE000EA69D /* UIView+ZYUI.m in Sources */,
 				2A929E5129939D42000EA69D /* UIButton+ZYUI.m in Sources */,
 				2A929E912993A187000EA69D /* ZYWeakProxy.m in Sources */,
