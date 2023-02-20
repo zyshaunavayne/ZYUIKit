@@ -45,6 +45,7 @@ FOUNDATION_EXPORT const unsigned char ZYUIKitVersionString[];
 #import "UIImage+ZYQRCode.h"
 #import "NSString+ZYUI.h"
 #import "UIView+ZYFrame.h"
+#import "UIImage+ZYColor.h"
 
 // WebViewJavascriptBridge
 #import "ZYWebViewJavascriptBridge_JS.h"
