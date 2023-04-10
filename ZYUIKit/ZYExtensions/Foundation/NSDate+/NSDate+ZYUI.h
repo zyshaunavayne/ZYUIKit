@@ -18,6 +18,10 @@ typedef NS_ENUM(NSInteger, ZYDateUnitFlags) {
 
 @interface NSDate (ZYUI)
 
+/// 获取当前时间
+/// @param format 日期格式 (yyyy-MM-dd HH:mm:ss, yyyy.MM.dd, yyyy-MM-dd HH:mm, yyyy-MM-dd); 默认 = yyyy-MM-dd HH:mm:ss
++ (NSString *)zy_getNowTimeWtihDateFormat:(NSString *)format;
+
 /// 根据时间戳创建一个日期
 /// @param time 时间戳（默认是精确到毫秒13位）
 /// @param format 日期格式 (yyyy-MM-dd HH:mm:ss, yyyy.MM.dd, yyyy-MM-dd HH:mm, yyyy-MM-dd); 默认 = yyyy-MM-dd HH:mm:ss

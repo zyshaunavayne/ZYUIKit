@@ -12,4 +12,8 @@
 /// 字符串转 KB、MB、GB
 - (NSString *)zy_convertFileSize;
 
+/// 字典转JSON
+/// - Parameter dic: 字典
++ (NSString *)zy_dicToJson:(NSDictionary *)dic;
+
 @end

@@ -9,6 +9,12 @@
 
 @implementation NSDate (ZYUI)
 
++ (NSString *)zy_getNowTimeWtihDateFormat:(NSString *)format
+{
+    NSTimeInterval time = [[self zy_getNowMSTimeStamp] integerValue] / 1000;
+    return [self zy_stringWithTime:time dateFormat:format];
+}
+
 + (NSString *)zy_stringWithTime:(NSTimeInterval)time
                       dateFormat:(NSString *)format
 {
