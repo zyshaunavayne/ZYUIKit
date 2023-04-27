@@ -32,7 +32,9 @@ typedef NS_ENUM(NSUInteger, ZYTextFieldType) {
     ///金额输入框，允许输入小数点后两位
     ZYTextFieldTypeMoney,
     ///允许输入小数点后一位(例如：运程)
-    ZYTextFieldTypeOneDecimal
+    ZYTextFieldTypeOneDecimal,
+    ///允许输入小数点后五位
+    ZYTextFieldTypeFiveDecimal
 };
 
 @interface UITextField (ZYUI)

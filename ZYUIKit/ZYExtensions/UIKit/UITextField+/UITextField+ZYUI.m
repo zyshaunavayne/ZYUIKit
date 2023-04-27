@@ -83,6 +83,10 @@ NSString *const ZYPhoneNumber_set = @"0123456789";
         if (![self isMoneyNum:NO textField:textField]) {
             textField.text = [textField.text stringByReplacingCharactersInRange:NSMakeRange(textField.text.length - 1, 1) withString:@""];
         }
+    } else if (textField.zy_textFieldType == ZYTextFieldTypeFiveDecimal){
+        if (![self isMoneyNum:YES FiveTextField:textField]) {
+            textField.text = [textField.text stringByReplacingCharactersInRange:NSMakeRange(textField.text.length - 1, 1) withString:@""];
+        }
     }
     
 
@@ -178,6 +182,36 @@ NSString *const ZYPhoneNumber_set = @"0123456789";
     } else{
         
         NSInteger retainCount = isMoney ? 3 : 2;
+        NSString *s1 = [textField.text substringFromIndex:[textField.text rangeOfString:@"."].location];
+        NSString *s2 = [textField.text substringToIndex:[textField.text rangeOfString:@"."].location];
+        if ((s1.length > retainCount || s2.length > maxCount))
+            return NO;
+    }
+    
+    return YES;
+}
+
+- (BOOL)isMoneyNum:(BOOL) isMoney FiveTextField:(UITextField *)textField
+{
+    if (textField.text.length > 0) {
+        NSString *stringRegex = @"(\\+|\\-)?(([0]|(0[.]\\d{0,5}))|([1-9]\\d*(([.]\\d{0,5})?)))?";
+        NSPredicate *phoneTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", stringRegex];
+        BOOL flag = [phoneTest evaluateWithObject:textField.text];
+        if (!flag) {
+            return NO;
+        }
+    }
+    //根据zy_limitMaxLength控制输入金额最多位数
+    //zy_limitMaxLength = 最大金额位数+3（金额要保留两位小数.xx）
+    NSInteger subCount = isMoney ? 6 : 5;
+    NSInteger maxCount = textField.zy_limitMaxLength - subCount;
+    if ([textField.text rangeOfString:@"."].location == NSNotFound) {
+        if ((textField.text.length > maxCount)) {
+            return NO;
+        }
+    } else{
+        
+        NSInteger retainCount = isMoney ? 6 : 5;
         NSString *s1 = [textField.text substringFromIndex:[textField.text rangeOfString:@"."].location];
         NSString *s2 = [textField.text substringToIndex:[textField.text rangeOfString:@"."].location];
         if ((s1.length > retainCount || s2.length > maxCount))
