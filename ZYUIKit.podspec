@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name = "ZYUIKit"
-  spec.version = "1.0.1"
+  spec.version = "1.0.2"
   spec.summary = "常用分类、UI组件、宏定义、内联函数"
    spec.homepage = "https://github.com/zyshaunavayne/ZYUIKit"
   spec.license = { type: 'MIT', file: 'LICENSE' }

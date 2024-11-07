@@ -89,3 +89,66 @@ CG_INLINE NSString *ZYDateString(NSTimeInterval time, NSString *dateFormat)
     if (timeStr.length == 13) { time = time / 1000;}
     return [NSDate zy_stringWithTime:time dateFormat:dateFormat ?: @"yyyy-MM-dd HH:mm:ss"];
 }
+
+/// 获取当前window
+CG_INLINE UIWindow *ZYMainWindow(void)
+{
+    UIWindow *window = nil;
+    if (@available(iOS 15.0, *)) {
+        for (UIWindowScene* windowScene in [UIApplication sharedApplication].connectedScenes) {
+            if (windowScene.activationState == UISceneActivationStateForegroundActive) {
+                window = windowScene.windows.firstObject;
+                break;
+            }
+        }
+        if (window == nil && [UIApplication sharedApplication].connectedScenes.allObjects.count) {
+            window = [[UIApplication sharedApplication].connectedScenes.allObjects.firstObject valueForKeyPath:@"delegate.window"];
+        }
+    } else {
+        window = [UIApplication sharedApplication].keyWindow;
+    }
+    
+    if (window == nil) {
+        id appDelegate = [[UIApplication sharedApplication] delegate];
+        if (appDelegate && [appDelegate valueForKey:@"window"]) {
+            window = [[UIApplication sharedApplication] delegate].window;
+        }
+    }
+    return window;
+}
+
+/// 判断当前是否是iPhoneX及以上
+CG_INLINE BOOL ZYIsIphone_X(void)
+{
+    BOOL isPhoneX = NO;
+    if (@available(iOS 11.0, *)) {
+        isPhoneX = ZYMainWindow().safeAreaInsets.bottom > 0.0;
+    }
+    return isPhoneX;
+}
+
+/// 获取底部安全距离
+CG_INLINE CGFloat ZYSafeAreaBottomHeight(void)
+{
+    CGFloat safeHeight = CGFLOAT_MIN;
+    if (@available(iOS 11.0, *)) {
+        safeHeight = ZYMainWindow().safeAreaInsets.bottom;
+    } else {
+        safeHeight = [UIApplication sharedApplication].statusBarFrame.size.height;
+    }
+    return safeHeight;
+}
+
+/// 获取状态栏距离
+CG_INLINE CGFloat ZYStatusBarHeight(void)
+{
+    CGFloat statusBarHeight = 0;
+    if (@available(iOS 13.0, *)) {
+        UIStatusBarManager *statusBarManager = [UIApplication sharedApplication].windows.firstObject.windowScene.statusBarManager;
+        statusBarHeight = statusBarManager.statusBarFrame.size.height;
+    } else {
+        statusBarHeight = [UIApplication sharedApplication].statusBarFrame.size.height;
+    }
+    return statusBarHeight;
+}
+
